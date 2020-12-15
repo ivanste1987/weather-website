@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <Title>Weather APP</Title>
+    <link rel="shortcut icon" type="image/jpg" href="/img/weatherapp.svg">
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="content">
+        {{>header}}
+        <div class="search">
+            <div class="city">
+
+                <h3 id="city" class="error"> </h3>
+
+            </div>
+            <form>
+                <input type="text" name="address" id="address" placeholder="City">
+                <button>Search</button>
+            </form>
+        </div>
+        <div class="result">
+            <div class="pollution-conatiner">
+                <article class="pollution">
+                    <figure>
+                        <img alt="pollution">
+                        <h2 id="pollution"></h2>
+                    </figure>
+
+                    <table id="pollution-items">
+                        <tr>
+                            <th colspan="3" id="pollutanHeader" style="text-align: left;padding:5px"></th>
+                        </tr>
+                        <tr>
+                            <td id="pm25"></td>
+                            <td id="so2"></td>
+                            <td id="no2"></td>
+                        </tr>
+                        <tr>
+                            <td id="pm10"></td>
+                            <td id="co"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" id="warningMsg"></td>
+                        </tr>
+
+                    </table>
+
+                    <!--a href="https://www.vecteezy.com/free-vector/pollution-mask">Pollution Mask Vectors by Vecteezy</a-->
+                </article>
+            </div>
+            <div class="temperature">
+                <img alt="icon"  id="weatherImage" width="250px">
+                <div class="temp">
+                    <h3 id="weatherDescription"></h3>
+                    <h2 id="temperature"></h2>
+                    <p><span id="temp_max"></span><span id="temp_min"></span></p>
+                </div>
+            </div>
+
+            <article class="temp-items">
+                <p><span id="fellslike"></span></p>
+                <p><span id="pressure"></span></p>
+                <p><span id="windspeed"></span> </p>
+                <p><span id="windDirection"></span></p>
+                <p><span id="humidity"></span></p>
+            </article>
+
+
+
+        </div>
+        <article id="fortcastFiveDays">
+            <div id="fortcastFiveDaysContainer">
+
+            </div>
+        </article>
+
+        {{>footer}}
+    </div>
+
+    <script src="/js/app.js" type="module"></script>
+</body>
+
+</html>
