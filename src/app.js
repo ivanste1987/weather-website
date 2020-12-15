@@ -10,6 +10,7 @@ const airpollution = require('./utils/airpollution');
 const fiveDayForecast = require('./utils/fiveDaysForecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 //path je nativni modul noda koji pravi putanju do javnog foldera, nema potreba ga instalirati jer ga node podrzava nativno
 //putanja do foldera console.log(__dirname) > /home/ivan/Desktop/Node.js Course/Web-Server/src + ../public
 //path.join() funkcija pravi konkatenaciju stringova naprimer path.join(__dirname, '../public')
@@ -324,6 +325,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port: ' + port)
 })

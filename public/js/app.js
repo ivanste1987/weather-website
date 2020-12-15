@@ -138,7 +138,7 @@ const getLocation = () => {
         console.log(position.coords.latitude);
         console.log(position.coords.longitude);
 
-        axios.post('http://localhost:3000/weather/geolocation', {
+        axios.post('/weather/geolocation', {
                 latitude: position.coords.latitude,
                 longitude: position.coords.longitude
             }, {
@@ -202,7 +202,7 @@ weatherForm.addEventListener('submit', (event) => {
 
     error.innerHTML = 'Loading'
 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             console.log(data)
             if (data.error) {
