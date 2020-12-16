@@ -28,7 +28,9 @@ a:hover{
     margin: 0 auto;
     padding: 0;
 }
-
+header{
+ border-bottom: 0.5px solid #ffffff;
+}
 header,
 header .logo,
 header .nav,

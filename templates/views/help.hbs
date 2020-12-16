@@ -3,21 +3,24 @@
 
 <head>
     <Title>Weather APP</Title>
-    <link rel="shortcut icon" type="image/jpg" href="/img/ico.ico">
+    <link rel="shortcut icon" type="image/jpg" href="/img/weatherapp.svg">
     <link rel="stylesheet" href="/style/style.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div id="content">
     <div id="main-content">
-        <div id="content">
-        <div class="main-content">
-            {{>header}}
-            <p>{{text}}</p>
-        </div>
-    
-    {{>footer}}
-        </div>
+       
+            <div class="main-content">
+                {{>header}}
+                <p>{{text}}</p>
+            </div>
+
+            {{>footer}}
+       
+    </div>
     </div>
 </body>
 
