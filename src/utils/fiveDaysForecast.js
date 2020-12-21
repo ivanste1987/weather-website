@@ -29,7 +29,7 @@ const fiveDayForecast = (latitude, longitude, callback) => {
                     weather.push(forecast[i].weather[0])
 
                     //kreiranje imena datuma koji se izvlaci iz liste
-                    const datum = new Date(forecast[i].dt_txt)
+                    const date = new Date(forecast[i].dt_txt)
                     var weekday = [];
                     weekday[0] = "Sunday";
                     weekday[1] = "Monday";
@@ -38,7 +38,7 @@ const fiveDayForecast = (latitude, longitude, callback) => {
                     weekday[4] = "Thursday";
                     weekday[5] = "Friday";
                     weekday[6] = "Saturday";
-                    var day = weekday[datum.getDay()];
+                    var day = weekday[date.getDay()];
                     date.push(day)
                 }
             }
