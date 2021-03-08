@@ -1,17 +1,16 @@
-*{
+* {
     box-sizing: border-box;
-  
 }
 body {
     color: #fefefe;
-    font-family: 'Noto Sans JP',sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     /*Backgroud*/
-    background: url('../img/bg-img.jpg');
+    background: url("../img/bg-img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-a{
+a {
     color: #888888;
     text-decoration: none;
     text-transform: uppercase;
@@ -19,7 +18,7 @@ a{
     padding: 5px;
     transition: all 0.35s ease;
 }
-a:hover{
+a:hover {
     color: #ffffff;
 }
 
@@ -28,13 +27,13 @@ a:hover{
     margin: 0 auto;
     padding: 0;
 }
-header{
- border-bottom: 0.5px solid #ffffff;
+header {
+    border-bottom: 0.5px solid #ffffff;
 }
 header,
 header .logo,
 header .nav,
-.search{
+.search {
     display: flex;
     align-content: center;
     align-items: center;
@@ -42,8 +41,7 @@ header .nav,
     flex-wrap: wrap;
 }
 
-
-.search{
+.search {
     padding: 10px 0px;
     border-bottom: 0.5px solid #ffffff;
 }
@@ -54,6 +52,7 @@ button {
     border: 1px solid #ffffff;
     color: #888888;
     padding: 10px 20px;
+    outline: none;
 }
 
 button:hover {
@@ -65,32 +64,54 @@ button:hover {
     align-items: center;
     flex-wrap: wrap;
 }
-.result .pollution-conatiner,
-.result .temperature,
-.result .temp-items{
-        display: flex;
-        text-align: center;
-        width: 300px;
-        padding: 15px;
-        margin: 15px;
-        /* border: 1px solid red */
+.row .pollution-conatiner,
+.row .temperature,
+.row .temp-items {
+    display: flex;
+    text-align: center;
+    width: 300px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
 }
 
+.result .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
-
-#pollution-items tr td{
+#pollution-items tr td {
     text-align: left;
-    padding:5px 0px 0px 5px; 
-    
+    padding: 5px 0px 0px 5px;
+
     /* border: 1px solid red; */
 }
-
+.result .temperature::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    height: 110%;
+    width: 110%;
+    z-index: 0;
+    /*box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);*/
+    /* filter: blur(10px); */
+    background: url('/public/img/bg-img.jpg');
+    background-position: center;
+    background-size: content;
+}
 .result .temperature,
 .result .temp-items {
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
 }
-.result .temperature h2{
+.result .temperature h2 {
     font-size: 5rem;
 }
 .result .temperature #weatherDescription {
@@ -99,14 +120,13 @@ button:hover {
 .result .temperature img {
     margin: 0 auto;
 }
-.temp{
+.temp {
     transform: translateY(-10%);
 }
 
-#logo{
+#logo {
     filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(307deg) brightness(108%) contrast(99%);
 }
-
 
 .result .temperature h3,
 .result .temperature h2,
@@ -115,10 +135,10 @@ button:hover {
     margin: 0px;
 }
 
-#fortcastFiveDays{
+#fortcastFiveDays {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     text-align: center;
     border-top: 1px solid #fefefe;
     border-bottom: 1px solid #fefefe;
@@ -130,19 +150,36 @@ button:hover {
     align-items: center;
     justify-content: center;
     padding: 25px 0px;
+}
+.date::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    height: 110%;
+    width: 110%;
+    z-index: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
     
 }
-.date{
+.date {
     width: 200px;
     padding: 25px;
     margin: 15px;
-    border: 1px solid #fefefe;
+    position: relative;
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    z-index: 1;
 }
-.date img{
+.date img {
     width: 100%;
 }
 
-.date .weather h4{
+.date .weather h4 {
     margin: 0;
     padding: 0;
 }
