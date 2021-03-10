@@ -11,16 +11,24 @@
 </head>
 
 <body>
-   
-        <div id="content">
-            
-                {{>header}}
-                <img class="portrait" src="/img/me.jpg" alt="" width="250px">
-                <p>{{text}}</p>
-            
 
-            {{>footer}}
-        
+    <div id="content">
+
+        {{>header}}
+        <div class="content">
+            <div class="header">
+                <h1>Litle about me</h1>
+            </div>
+            <div class="article">
+                <p>{{text}}</p>
+                <img class="portrait" src="/img/ivan-a1.png" alt="Profile image" width="300px">
+            </div>
+
+        </div>
+
+
+        {{>footer}}
+
     </div>
 </body>
 

@@ -135,8 +135,7 @@ const defaultLocation = () => {
 const getLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
 
-        console.log(position.coords.latitude);
-        console.log(position.coords.longitude);
+     
 
         axios.post('/weather/geolocation', {
                 latitude: position.coords.latitude,
@@ -147,7 +146,7 @@ const getLocation = () => {
                 maximumAge: 0
             })
             .then((response) => {
-                console.log(response.data)
+               
                 error.innerHTML = 'Loading'
                 if (response.data.error) {
                     error.innerHTML = response.data.error
@@ -204,7 +203,7 @@ weatherForm.addEventListener('submit', (event) => {
 
     fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
-            console.log(data)
+           
             if (data.error) {
                 error.innerHTML = data.error
             } else {
