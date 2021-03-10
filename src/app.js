@@ -47,7 +47,7 @@ app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
     text: "Some Weather text.",
-    name: "John Doe",
+    name: "Ivan Stefanovic",
   });
 });
 
