@@ -297,7 +297,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help page",
     text: "Some useful text.",
-    name: "John Doe",
+    name: "Ivan Stefanoivc",
   });
 });
 
