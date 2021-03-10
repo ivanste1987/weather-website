@@ -236,6 +236,6 @@ button:hover {
     align-items: center;
     padding: 25px;
 }
-p{
+.article p{
     width: 50%;
 }
