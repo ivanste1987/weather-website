@@ -79,12 +79,12 @@ const defaultLocation = () => {
             document.getElementById("temp_min").innerHTML = " L " + Math.round(response.data.temp_min) + '&#x2103;';
 
             //Air Pollution
-            document.getElementById("pm25").innerHTML = "PM2.5 " + response.data.pm2_5
-            document.getElementById("pm10").innerHTML = "PM10 " + response.data.pm10
-            document.getElementById("no2").innerHTML = "NO2 " + response.data.no2
-            document.getElementById("so2").innerHTML = "SO2 " + response.data.so2
-            document.getElementById("co").innerHTML = "CO " + response.data.co
-            document.getElementById("pollution").innerHTML = response.data.co
+            // document.getElementById("pm25").innerHTML = "PM2.5 " + response.data.pm2_5
+            // document.getElementById("pm10").innerHTML = "PM10 " + response.data.pm10
+            // document.getElementById("no2").innerHTML = "NO2 " + response.data.no2
+            // document.getElementById("so2").innerHTML = "SO2 " + response.data.so2
+            // document.getElementById("co").innerHTML = "CO " + response.data.co
+            // document.getElementById("pollution").innerHTML = response.data.co
 
             let element = document.getElementById("fortcastFiveDaysContainer")
             let container = document.createElement('DIV')
@@ -170,12 +170,12 @@ const getLocation = () => {
 
 
                     //Air Pollution+ '&#x2103;'
-                    document.getElementById("pm25").innerHTML = "PM2.5 " + response.data.pm2_5
-                    document.getElementById("pm10").innerHTML = "PM10 " + response.data.pm10
-                    document.getElementById("no2").innerHTML = "NO2 " + response.data.no2
-                    document.getElementById("so2").innerHTML = "SO2 " + response.data.so2
-                    document.getElementById("co").innerHTML = "CO " + response.data.co
-                    document.getElementById("pollution").innerHTML = response.data.co
+                    // document.getElementById("pm25").innerHTML = "PM2.5 " + response.data.pm2_5
+                    // document.getElementById("pm10").innerHTML = "PM10 " + response.data.pm10
+                    // document.getElementById("no2").innerHTML = "NO2 " + response.data.no2
+                    // document.getElementById("so2").innerHTML = "SO2 " + response.data.so2
+                    // document.getElementById("co").innerHTML = "CO " + response.data.co
+                    // document.getElementById("pollution").innerHTML = response.data.co
 
                     //Five day forecast
                     for (let i in response.data.fiveDayForecast) {
